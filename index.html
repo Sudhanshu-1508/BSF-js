@@ -17,13 +17,32 @@
     </div>
     <div id="password">
         Enter Password: <span id ="message" style="color:red;"></span>
-        <input type="password" name="password"  placeholder="password"/>
+        <input type="password" onblur="return PassChk()" name="password"  placeholder="password"/>
     </div>
     <div id="submit">
         <input type="submit">
     </div>
 </form>
 
+<script>
+function PassChk()
+    {
+        console.log("1");
+        psd = document.getElementById("password").value;
+   
+        
+   
+        if(psd == "")
+            {
+            document.getElementById("message").innerHTML = "**Please enter password";
+                return false;
+            }
+        else
+            {
+                    return true;
+            }
+    } 
+    </script>
 
 </body>
 </html>
