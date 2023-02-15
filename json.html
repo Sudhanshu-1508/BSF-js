@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON</title>
+    </head>
+<body>
+
+
+
+    <script>
+        Person = {
+            firstname : "Sudhanshu",
+            lastname : "Kulkarni",
+            age : "21",
+            number :function f1(no){
+                return this.number
+            }
+        };
+
+        console.log(Person);
+        console.log(Person.firstname);
+        console.log(Person.lastname);
+
+
+        let text = '{"employees":[' +
+    '{"firstName":"John","lastName":"Doe" },' +
+    '{"firstName":"Anna","lastName":"Smith" },' +
+    '{"firstName":"Peter","lastName":"Jones" }]}';
+
+    var text1 = '{"emp":['+
+    '{"firstname":"John","lastname":"Doe"},'+
+    '{"firstname":"Anna","lastname":"smith"},'+
+    '{"firstname":"peter", "lastname":"Jones"}]}';
+
+    console.log(text);
+    const obj = JSON.parse(text);
+    console.log(obj);
+    
+    console.log(obj1);
+      </script>
+</body>
+</html>

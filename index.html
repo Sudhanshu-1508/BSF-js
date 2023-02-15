@@ -2,11 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Understanding JS </title>
-    <link rel="stylesheet" href="style.css">       
+    <title> Understanding JS </title>       
 </head>
 
 <body>
@@ -16,8 +14,8 @@
         <input type="email" name="e-mail"  placeholder="e-mail"/>
     </div>
     <div id="password">
-        Enter Password: <span id ="message" style="color:red;"></span>
-        <input type="password" onblur="return PassChk()" name="password"  placeholder="password"/>
+        Enter Password: 
+        <input type="password" onblur="return PassChk()" name="password"  placeholder="password">
     </div>
     <div id="submit">
         <input type="submit">
@@ -26,23 +24,27 @@
 
 <script>
 function PassChk()
-    {
-        console.log("1");
-        psd = document.getElementById("password").value;
-   
-        
-   
-        if(psd == "")
-            {
-            document.getElementById("message").innerHTML = "**Please enter password";
-                return false;
-            }
-        else
-            {
-                    return true;
-            }
-    } 
-    </script>
+{
+	console.log("1");
+	psd = document.getElementById("password").value;
+	const lowercase = new RegExp("(?=.*[a-z])");
+	const uppercase = new RegExp("(?=.*[A-Z])");
+	const number = new RegExp("(?=.*[0-9])");
+	const specialchar = new RegExp("(?=.*[!@#\$%\^&\*])");
+	
+	console.log(" 2")
+	
+	if((specialchar.test(psd) && number.test(psd) && lowercase.test(psd) && uppercase.test(psd)) == true)
+	{
+		return true;
+	}
+	else
+	{
+		alert("**password should have at least 1 uppercase, 1 lowercase letter, 1 special character, 1 number");
+		return false;
+	}
+} 
+</script>
 
 </body>
 </html>
