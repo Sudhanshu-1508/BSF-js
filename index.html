@@ -36,12 +36,14 @@ function PassChk()
 	
 	if((specialchar.test(psd) && number.test(psd) && lowercase.test(psd) && uppercase.test(psd)) == true)
 	{
-		return true;
+		console.log("3");
+		return true;		
 	}
 	else
 	{
+		console.log("4");
 		alert("**password should have at least 1 uppercase, 1 lowercase letter, 1 special character, 1 number");
-		return false;
+		return false;		
 	}
 } 
 </script>
