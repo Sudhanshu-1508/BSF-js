@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <button class="bttn">Click here</button>
+
+            <script>
+                console.log("1");
+              function buzzer(){
+                console.log("BUZZ");
+              }
+              console.log("2");
+              const x = setInterval(buzzer, 2000);
+              const y = setTimeout(buzzer, 1000);
+
+              clearInterval(x);
+              clearTimeout(y);
+            </script>
+        </body>
+    </head>
+</html>

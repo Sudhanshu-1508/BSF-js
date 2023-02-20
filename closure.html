@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script>
+                function outer(){
+                    const outerVal = "Outerval";
+                    function inner(){
+                        const innerVal = "InnerVal";
+                        console.log(innerVal);
+                        console.log(outerVal);
+                    }
+                    return inner;    
+                }
+              //  outer(); will no work
+              //  inner(); will no work
+
+              const closure = outer();
+              closure();
+            </script>
+        </body>
+    </head>
+</html>
