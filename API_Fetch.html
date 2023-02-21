@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">Fetch a file to change this text.</p>
+
+<script>
+fetch("demo.txt").then((response)=> {
+console.log("Resolved",response);
+}).catch((err)=>{
+console.log("rejected",err);
+});
+</script>
+
+</body>
+</html>

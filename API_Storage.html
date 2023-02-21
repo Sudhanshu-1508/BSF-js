@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+localStorage.setItem("name"," SUdhanshu");
+document.getElementById("demo").innerHTML = localStorage.getItem("name");
+var x = localStorage.getItem("name");
+console.log(x);
+
+var  y = sessionStorage.setItem("name1","kulkarni"); // stores the data throughout the session data gets deleted once you close the browser
+document.getElementById("demo1").innerHTML = sessionStorage.getItem("name1");
+console.log(sessionStorage.getItem("name1"));
+
+
+</script>
+
+</body>
+</html>
