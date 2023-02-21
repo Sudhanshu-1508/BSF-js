@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+/*
+let name = {
+    firstname:"Sudhanshu",
+    lastname: "Kulkarni",
+    fullname: function(){
+        console.log(this.firstname+" "+this.lastname);
+    }
+}
+name.fullname();
+
+let name2 = {
+    firstname:"sudhanshu1",
+    lastname:"Kulkarni2",
+}
+
+name.fullname.call(name2);
+*/
+
+var x = {
+    name :"Sudhanshu",
+    surname :"Kulkarni"
+}
+
+var y = {
+    name :"Sudhanshu1",
+    surname:"kulkarni1"
+}
+
+fullName = function(hometown, state){
+    console.log(this.name+ " "+ this.surname+ "from "+hometown);
+}
+//call
+fullName.call(x,"pune", "MH");
+fullName.call(y);
+
+//apply
+fullName.apply(x , ["Pune", "MH"]);  //arguments in the array format 
+
+//bind method  create a copy of fullname function and bind it to the object and will return a function or method
+var myName = fullName.bind(x, "Mumbai", "MH");
+myName();
+        </script>
+    </body>
+</html>
