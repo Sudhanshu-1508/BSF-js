@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html lang="eng">
+    <head>
+
+    </head>
+
+    <body>
+
+
+        <script>
+            let p = new Promise((resolve, reject)=>{
+                    console.log("Promise is pending");
+                    setTimeout(()=>{
+                      //  alert("Promise fulfilled");
+                        resolve(true);
+                      //  console.log("Promise fulfilled");
+                    },5000);         
+            })
+
+            let p2 = new Promise((resolve, reject)=>{
+                    console.log("Promise is pending");
+                    setTimeout(()=>{
+                     //   alert("Promise rejected");
+                        reject(new Error("Error due to rejection"));
+                     //   console.log("Promise rejected");
+                    },6000);         
+            })
+            //to get the value
+            p.then((value)=>{
+                console.log(value);
+            })
+            /*/to catch the error or failure
+            p2.catch((error)=>{
+                console.log("Error occured in P2");
+            })
+            */
+            //
+            p2.then((value)=>{
+                console.log(value);
+            },(error)=>{
+                console.log(error);
+            })
+        </script>
+    </body>
+</html>

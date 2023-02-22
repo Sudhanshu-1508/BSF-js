@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+<script>
+
+async function Fun(){
+    let p1 = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve("27 Deg");
+        },1000)
+    })
+
+    let p2 = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve("21 Deg");
+        },2000)
+    })
+
+    let p1Deg = await p1;
+    let p2Deg = await p2;
+    return [p1Deg, p2Deg];
+}
+
+Fun();
+
+async function F1(){
+    return 9;
+}
+
+F1().then((x)=>{
+    alert(x);
+})
+
+   
+   
+</script>
+</body>
+</html>
